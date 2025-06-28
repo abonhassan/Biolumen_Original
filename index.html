@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BioLumen Energia</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<link href="./CSS ORGANIZADO/style.css" rel="stylesheet"/>
+<link href="Responsivo.css" rel="stylesheet"/>
+
+</head>
+
+<body>
+
+  <header>
+
+  
+   <!--LOGO DA EMPRESA-->
+    <div class="brand-icon-container">
+      <img src="./Images/Logo-Biolumen.png" alt="Sol" class="brand-icon">
+    </div>  
+
+
+   <!--VIDEO HEADER-->
+
+      <video id="header_video" autoplay="" loop="" muted="" playsinline="">
+      <source src="./Videos/Header_Video.mp4" type="video/mp4"/>
+      Seu navegador não suporta vídeo HTML5.
+      </video>
+
+      <div class="header-content">
+
+        <h1 id="title">Energia limpa com economia garantida</h1>
+
+      </div>
+
+
+     <!--ILUSTRACAO-->
+
+      <media class="animation_02">
+
+        <img class="wind_turbine_02" src="./Images/Ilustration_02.png"/>
+
+      </media>
+
+    </header>
+
+    <section class="introduction-section">
+
+      <div>
+
+        <h2 id="header_quote">Quer economizar na fatura de energia do seu condomínio, comércio, clínica?</h2>
+
+        <p id="header_benefit"><strong>10% de desconto no consumo da sua empresa</strong>,<br> garantido em contrato!</p>
+
+      </div>
+
+
+     <!--VIDEO DE INTRODUCAO-->
+
+      <video id="introduction" autoplay muted loop playsinline controls>  
+      <source src="./Videos/Introduction_Video.mp4" type="video/mp4">
+    Seu navegador não suporta vídeo HTML5.
+      </video>
+  
+    </section>
+
+ 
+   <!--BOTAO CALL TO ACTION-->
+
+  <section class="CTA_BOX">
+
+    <a href="#benefits_container" id="CTA">Economize Agora</a>
+
+  </section>
+
+
+   <!--CALCULADORA DE ECONOMIA-->
+
+  <section>
+
+    <h2>Calculadora de Economia</h2>
+
+    <div class="calculator reduzida">
+
+      <label for="valorFatura">Valor da fatura de energia (R$):</label>
+
+      <input id="valorFatura" placeholder="Ex: 1500" type="number"/>
+
+      <label for="tarifa">Tarifa (R$ por kWh):</label>
+
+      <input id="tarifa" placeholder="Ex: 0.75" type="number"/>
+
+      <button onclick="calcularDesconto()">Calcular economia</button>
+
+      <div class="result" id="resultado"></div>
+
+
+   <!--AREA DE PREENCHIMENTO DOS MESES DE CONSUMO-->
+
+      <div id="inputMeses">
+
+        <h3>Insira os valores da fatura para cada mês (R$):</h3>
+
+        <div id="inputMeses">
+
+          <div class="coluna-mes">
+
+            <label for="mes0">Jan:</label><input type="number" id="mes0" min="1000" placeholder="R$">
+
+            <label for="mes1">Fev:</label><input type="number" id="mes1" min="1000" placeholder="R$">
+
+            <label for="mes2">Mar:</label><input type="number" id="mes2" min="1000" placeholder="R$">
+
+            <label for="mes3">Abr:</label><input type="number" id="mes3" min="1000" placeholder="R$">
+
+          </div>
+
+
+          <div class="coluna-mes">
+
+            <label for="mes4">Mai:</label><input type="number" id="mes4" min="1000" placeholder="R$">
+
+            <label for="mes5">Jun:</label><input type="number" id="mes5" min="1000" placeholder="R$">
+
+            <label for="mes6">Jul:</label><input type="number" id="mes6" min="1000" placeholder="R$">
+
+            <label for="mes7">Ago:</label><input type="number" id="mes7" min="1000" placeholder="R$">
+
+          </div>
+
+
+          <div class="coluna-mes">
+
+            <label for="mes8">Set:</label><input type="number" id="mes8" min="1000" placeholder="R$">
+
+            <label for="mes9">Out:</label><input type="number" id="mes9" min="1000" placeholder="R$">
+
+            <label for="mes10">Nov:</label><input type="number" id="mes10" min="1000" placeholder="R$">
+
+            <label for="mes11">Dez:</label><input type="number" id="mes11" min="1000" placeholder="R$">
+
+          </div>
+
+        </div>
+
+
+   <!--BOTAO PARA GERAR O GRAFICO-->
+
+        <button id="grafico" onclick="gerarGrafico()" style="display:block; margin-top: 10px;">Gerar Gráfico</button>
+
+      </div>
+
+    </div>
+
+    <canvas id="graficoEconomia"></canvas>
+
+    <canvas id="graficoEconomia"></canvas>
+
+  </div>
+
+  </section>
+
+   <!--ILUSTRACAO-->
+
+    <media class="animation">
+
+      <img class="wind_turbine" src="./Images/Ilustration_01.png"/>
+
+    </media>
+
+  <!--BENEFICIOS BIOLUMEN-->
+
+  <section class="dynamic-benefits-wrapper">
+    <!-- Left side: 3 stacked impactful images -->
+    <div class="benefits-images">
+      <img src="./Images/photo_01.jpg" alt="Imagem 1" class="benefit-img img1" />
+      <img src="./Images/photo_03.jpg" alt="Imagem 2" class="benefit-img img2" />
+      <img src="./Images/photo_02.jpg" alt="Imagem 3" class="benefit-img img3" />
+    </div>
+  
+    <!-- Right side: Floating Benefits Slider -->
+    <div class="floating-benefits">
+      <button class="slide-btn prev-benefit">&#10094;</button>
+  
+      <div class="benefit_container">
+        <div class="benefit_viewport">
+          <div class="benefit_box">
+            <div class="benefit_item">
+              <h3>Economia Imediata</h3>
+              <p>Reduza sua conta de luz desde o primeiro mês com nossa solução inteligente.</p>
+            </div>
+            <div class="benefit_item">
+              <h3>Sustentabilidade</h3>
+              <p>Contribua para o meio ambiente com energia limpa e renovável.</p>
+            </div>
+            <!-- mais benefit_item -->
+          </div>
+        </div>
+      </div>
+  
+      <button class="slide-btn next-benefit">&#10095;</button>
+    </div>
+  </section>
+  
+
+  <!-- CAIXA EXPLICATIVAS COM BOTAO -->
+  
+  <section class="dynamic-explanation-wrapper">
+
+    <div class="floating-explanation">
+
+      <button class="slide-btn prev" aria-label="Previous">
+
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+  
+          <path d="M15 18l-6-6 6-6" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  
+        </svg>
+  
+      </button>
+
+  <div class="explanation_container">
+
+    <div class="explanation_viewport">
+
+      <div class="explanation_box" id="explanationBox">
+
+        <div class="explanation_item">
+
+          <h3>Como funciona a economia?</h3>
+
+          <p>Você insere os dados da sua conta de luz e nosso sistema calcula<br>quanto você economizaria com energia sustentável.</p>
+
+        </div>
+
+        <div class="explanation_item">
+        
+          <h3>Resultados visuais</h3>
+        
+          <p>Os resultados aparecem em formato gráfico,<br>comparando seu consumo atual com o cenário com energia limpa.</p>
+      
+        </div>
+      
+        <div class="explanation_item">
+      
+          <h3>Simples e rápido</h3>
+      
+          <p>Em poucos cliques você entende o impacto positivo<br>da energia sustentável na sua conta e no meio ambiente.</p>
+      
+        </div>
+    
+      </div>
+  
+    </div>
+
+  </div>
+
+  <button class="slide-btn next" aria-label="Next">
+  
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+
+    <path d="M9 6l6 6-6 6" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+    </svg>
+
+  </button>
+
+</div>
+
+<!--BACKGROUND IMAGES-->
+
+<div class="layered-images">
+  <img src="./Images/img_01.jpg" alt="Sustentável 1" class="img1" />
+  <img src="./Images/img_05.jpg" alt="Sustentável 2" class="img2" />
+  <img src="./Images/img_02.jpg" alt="Sustentável 3" class="img3" />
+</div>
+
+</section>
+
+  <!--QUESTOES E RESPOSTAS-->
+  <section class="faq-container">
+    <div class="faq-left">
+      <div class="faq">
+        <h2>Perguntas Frequentes</h2>
+  
+        <h3>Qual é o tempo de retorno do investimento?</h3>
+        <p>O tempo de retorno varia conforme o consumo energético e a instalação, mas geralmente é de 3 a 5 anos.</p>
+  
+        <h3>O sistema funciona em dias nublados?</h3>
+        <p>Sim, ainda que com menor eficiência, os sistemas continuam gerando energia mesmo com baixa luminosidade.</p>
+  
+        <h3>O sistema funciona em dias nublados?</h3>
+        <p>Sim, ainda que com menor eficiência, os sistemas continuam gerando energia mesmo com baixa luminosidade.</p>
+      </div>
+    </div>
+  
+    <div class="faq-right">
+      <img src="./Images/Illustration_05.jpg" alt="FAQ Image Placeholder" />
+    </div>
+  </section>
+  
+
+    <!--FORMULARIO DE CONTATO-->
+
+  <section class="contact-form">
+
+    <h2>Fale com a BioLumen</h2>
+
+    <form>
+
+      <input name="nome" placeholder="Seu nome" required="" type="text"/>
+
+      <input name="email" placeholder="Seu e-mail" required="" type="email"/>
+
+      <textarea name="mensagem" placeholder="Sua mensagem" required="" rows="5"></textarea>
+
+      <button type="submit">Enviar mensagem</button>
+
+    </form>
+
+    <!--BOTAO DE WHATSAPP-->
+
+    <div class="whatsapp-buttons">
+
+      <a href="https://wa.me/5511953273802" target="_blank"><img id="img_button" src="./Images/whats_logo.webp"/></a>
+
+    </div>
+
+  </section>
+
+  <!--INFORMACOES DE CONTATO-->
+  <footer>
+
+    <p><strong>Fabiana Luz</strong><br/><i class="fas fa-phone"></i> (11) 95327-3802<br/><i class="fas fa-envelope"></i> fabiana.luz@biolumen.com.br</p>
+
+    <p><strong>Karla Chriguer</strong><br/><i class="fas fa-phone"></i> (11) 95001-5981</p>
+
+    <p>© 2025 BioLumen Energia. Todos os direitos reservados.</p>
+
+  </footer>
+
+
+
+<script src="script.js"></script></body>
+</html>

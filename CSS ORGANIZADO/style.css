@@ -1,0 +1,792 @@
+
+    :root {
+      --primary-color: #cc6600;
+      --accent-color: #e89c00;
+      --background-light: #fff;
+      --text-dark: #222;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      overflow-x: hidden;
+    }
+    
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--text-dark);
+      background-color: var(--background-light);
+      line-height: 1.6;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    /* TAGS DE TEXTO */
+
+
+    i {
+      font-size: 1.5rem;
+      margin-right: 8px;
+    }
+
+    h2 {
+      color: #F4B500;
+      margin-bottom: 20px;
+      padding: 0;
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+    }
+
+    #subtitle {
+      padding: 0 80px;
+    }
+
+    p {
+      color: #222;
+    }
+
+    p, li {
+      font-size: 1.1rem;
+      font-weight: 400;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li::before {
+      content: '✅';
+      margin-right: 8px;
+    }
+
+    .faq h3 {
+      margin-top: 20px;
+      color: #395CAA;
+      font-size: 1.2rem;
+    }
+
+  /* HEADER */
+
+    header {
+      position: relative;
+      text-align: center;
+    }
+
+
+    .header-content {
+      padding: 10px 20px 100px;
+    }
+
+    .header-content h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+   #title {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #F4B500;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 20px;
+      animation: fadeInUp 0.8s ease forwards;
+      transform: translateY(10px);
+      opacity: 0;
+    }
+    
+  #header_quote {
+      font-size: 1.4rem;
+      font-weight: 600;
+      font-style: italic;
+      color: #F4B500;
+      padding: 10ox 16px;
+      margin-bottom: 30px;
+      animation: fadeInUp 1s ease forwards;
+      transform: translateY(10px);
+      opacity: 0;
+    }
+    
+    #header_benefit {
+      font-size: 1.8rem;
+      word-break: break-all;
+      color: #222;
+      font-weight: 600;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+      padding: 10px 16px; 
+      animation: fadeInUp 1.2s ease forwards;
+      transform: translateY(10px);
+      opacity: 0;
+    }
+    
+    /* Simple animation for smooth entrance */
+    @keyframes fadeInUp {
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    
+
+.brand-name,
+.header-content h1 {
+  font-family: 'Playfair Display', serif;
+  color: #F4B500;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+  transition: all 1s ease-in-out;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Tridimensional com animação */
+
+.brand-name.appear,
+.header-content h1.appear {
+  opacity: 1;
+  transform: translateY(0);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  color: #F4B500;
+}
+
+.brand-icon-container {
+  position:relative;
+  top: 0px;
+  left: 20px;
+  z-index: 2;
+}
+
+.brand-icon {
+  height: 400px;
+  max-width: 600px;
+  min-width: 200px;
+  width: auto;
+  filter: drop-shadow(0 1px 3px rgba(0,0,0,0.4));
+}
+
+
+header video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.4);
+}
+
+  /* INTRODUCAO */
+
+    .introduction-section {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; /* garante alinhamento à esquerda */
+      gap: 30px;
+    }
+    
+    .introduction-section h2,
+    .introduction-section p {
+      margin-left: 0;
+      text-align: left;
+    }
+    
+    .introduction-section h2 {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      color: #395CAA;
+    }
+    
+    .introduction-section p {
+      font-size: 1.2rem;
+      color: #444;
+    }
+    
+    .introduction-section video {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      object-fit: cover;
+      align-self: flex-start; /* garante que o vídeo fique alinhado à esquerda */
+    }
+
+  /* BOTAO CALL TO ACTION */
+
+    .CTA_BOX {
+      margin: 20px auto;
+      padding: auto auto;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    #CTA {
+      display: inline-block;
+      padding: 20px 40px;
+      background: linear-gradient(135deg, #f7971e, #ffd200);
+      color: #222;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      box-shadow: 0 8px 20px rgba(255, 166, 0, 0.4);
+      border: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    #CTA:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 24px rgba(255, 140, 0, 0.5);
+      background: linear-gradient(135deg, #ffae00, #ffe044);
+    }    
+
+
+  /* CALCULADORA E GRAFICO */
+
+    .calculator {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+      margin-top: 50px;
+    }
+
+
+    .calculator button,
+#inputMeses button {
+  background: linear-gradient(135deg, #f7971e, #ffd200);
+  color: #222;
+  font-weight: bold;
+  border: none;
+  padding: 14px 28px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(255, 166, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.calculator button:hover,
+#inputMeses button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 140, 0, 0.4);
+  background: linear-gradient(135deg, #ffae00, #ffe044);
+}
+
+/* Agrupamento dos inputs mensais em colunas */
+#inputMeses {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.coluna-mes {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Inputs grandes */
+.calculator input,
+#inputMeses input {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Espaço para o gráfico */
+#graficoEconomia {
+  margin-top: 50px;
+  max-width: 100%;
+}
+
+#inputMeses button {
+  width: 120px; /* tamanho proporcional à largura dos inputs */
+  height: 60px; /* altura semelhante à dos inputs */
+  padding: 10px;
+  font-size: 1rem;
+  background: linear-gradient(135deg, #f7971e, #ffd200);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(255, 166, 0, 0.3);
+  margin-top: 16px;
+  align-self: flex-end;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+#inputMeses button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(255, 140, 0, 0.4);
+  background: linear-gradient(135deg, #ffae00, #ffe044);
+}
+
+    
+  /* ANIMACOES E ILUSTRACOES */
+
+  .wind_turbine {
+    z-index: 1;
+  }
+
+  .wind_turbine_02 {
+    z-index: -1;
+  }
+
+    .wind_turbine,
+   .wind_turbine_02 {
+  width: 10vw;
+  max-width: 180px;
+  min-width: 150px;
+  position: absolute;
+  right: 0%;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInMove 2s ease-out forwards;
+}
+
+@keyframes fadeInMove {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+  /* BENEFICIOS */
+
+  .dynamic-benefits-wrapper {
+    position: relative;
+    width: 100%;
+    height: 820px;
+    margin-top: 100px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    gap: 20px;
+  }
+  
+  /* LEFT IMAGES */
+  .benefits-images {
+    position: relative;
+    width: 45%;
+    max-width: 650px;
+    height: 100%;
+    z-index: 1;
+    display: block; /* change from flex to allow absolute positioning */
+  }
+  
+  .benefits-images img {
+    position: absolute;
+    height: 120%;
+    width: auto;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s ease;
+    opacity: 1;
+    filter: none;
+  }
+  
+  /* Stagger the images horizontally with slight vertical offsets */
+
+  .benefit-img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .benefits-images .img1 {
+    top: -20px;
+    left: 0%;
+    transform: rotate(-0deg) scale(1.1);
+    z-index: 1;
+  }
+  
+  .benefits-images .img2 {
+    top: 0px;
+    left: 15%;
+    transform: rotate(-6deg) scale(1.15);
+    z-index: 2;
+  }
+  
+  .benefits-images .img3 {
+    top: 20px;
+    left: 35%;
+    transform: rotate(-8deg) scale(1.2);
+    z-index: 3;
+  }
+  
+  
+  /* RIGHT FLOATING CONTAINER */
+  .floating-benefits {
+    position: relative;
+    width: 60%;
+    max-width: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+  }
+  
+  /* Arrows */
+  .slide-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 2rem;
+    opacity: 0.6;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .slide-btn:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  
+  /* Carousel container */
+  .benefit_container {
+    background: rgba(255, 255, 255, 0.97);
+    padding: 60px 40px; /* more vertical space */
+    border-radius: 20px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    flex-grow: 1;
+    min-height: 360px; /* ensures consistent visual height */
+  }
+  
+  
+  /* Viewport holds just one item */
+  .benefit_viewport {
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .benefit_box {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+  }
+  
+  .benefit_item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .benefit_item h3 {
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+    color: #395CAA;
+  }
+  
+  .benefit_item p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+
+    /* SLIDE: CSS */
+    .dynamic-explanation-wrapper {
+      position: relative;
+      width: 100%;
+      height: 820px; /* increased height to fit everything */
+      margin-top: 100px;
+      overflow: hidden;
+    }
+    
+    .layered-images {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
+    
+    .layered-images img {
+      position: absolute;
+      height: 110%;
+      width: auto;
+      object-fit: cover;
+      opacity: 1;
+      filter: none;
+      border-radius: 16px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+      transition: transform 0.4s ease;
+    }
+    
+    /* Less overlap between images */
+    .img1 {
+      top: -20px;
+      left: 20%;
+      transform: rotate(-2deg) scale(1.1);
+      z-index: 1;
+    }
+    
+    .img2 {
+      top: 40px;
+      left: 40%;
+      transform: rotate(1deg) scale(1.15);
+      z-index: 2;
+    }
+    
+    .img3 {
+      top: 80px;
+      left: 72%;
+      transform: rotate(-1deg) scale(1.2);
+      z-index: 3;
+    }
+    
+    /* Explanation content fully visible */
+    .floating-explanation {
+      position: absolute;
+      top: 50%;
+      left: 5%;
+      transform: translateY(-50%);
+      z-index: 4;
+      width: 60%;
+      max-width: 650px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    /* Explanation content */
+.explanation_container {
+  background: rgba(255, 255, 255, 0.97);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+/* Show only one item */
+.explanation_viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.explanation_box {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+}
+
+.explanation_item {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.explanation_item {
+  min-width: 100%;
+  flex-shrink: 0;
+  padding: 60px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  overflow-wrap:break-word;
+  word-wrap: break-word;
+}
+
+    
+    .explanation_item h3 {
+      font-size: 1.6rem;
+      margin-bottom: 16px;
+      text-align: left;
+      color: #395CAA;
+    }
+    
+    .explanation_item p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #333;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    /* SETAS - BOTOES */
+
+    .slide-btn {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      opacity: 0.6;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      z-index: 5;
+      font-size: 2rem;
+    }
+    
+    .slide-btn:hover {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+   
+    .slide-btn svg {
+      width: 28px;
+      height: 28px;
+      stroke: #888;
+      transition: stroke 0.3s ease;
+    }
+    
+    .slide-btn:hover svg {
+      stroke: var(--accent-color);
+    }
+
+  /* FAQ - PERGUNTAS E RESPOSTAS */
+
+  .faq-container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+  }
+  
+  .faq-left {
+    flex: 1 1 60%;
+  }
+  
+  .faq-right {
+    flex: 1 1 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .faq-right img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilo padrão das perguntas/respostas já existentes */
+  .faq h3 {
+    margin-top: 20px;
+    color: #395CAA;
+    font-size: 1.2rem;
+  }
+  
+  .faq p {
+    margin-bottom: 16px;
+    font-size: 1.05rem;
+    color: #444;
+    line-height: 1.5;
+  }
+  
+    
+  /* FORMULARIO DE CONTATO */
+    
+    .contact-form {
+      margin-top: 40px;
+      margin-bottom: 40px;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    .contact-form button {
+      float: right;
+      background: linear-gradient(135deg, #f7971e, #ffd200);
+      color: #222;
+      font-weight: bold;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 8px;
+      box-shadow: 0 6px 16px rgba(255, 166, 0, 0.3);
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+    
+    .contact-form button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(255, 140, 0, 0.4);
+      background: linear-gradient(135deg, #ffae00, #ffe044);
+    }
+
+    /* BOTAO DO WHATSAPP */
+    
+
+    .whatsapp-buttons a {
+      background: linear-gradient(145deg, #25D366, #25D366);
+      color: white;
+      padding: 12px;
+      border-radius: 50%;
+      font-weight: bold;
+      font-size: 1.5rem;
+      width: 40px;
+      height: 40px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+    
+    .whatsapp-buttons a:hover {
+      background: linear-gradient(145deg, #25D366, #25D366);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.3);
+    }
+    
+
+   #img_button {
+    height: 40px;
+    width: 40px
+   }
+
+   /* INFORMACOES DA EMPRESA */
+
+    footer {
+      background-color: #F4B500;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 1rem;
+    }
+
+    footer p {
+      margin: 10px 0;
+    }
+      
+    
