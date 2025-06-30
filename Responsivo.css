@@ -99,65 +99,46 @@ header video {
 
     /* ESTRUTURA GERAL IGUALADA */
     .floating-explanation {
-        display: flex;
-        justify-content: center;
-        align-items: center; /* caso deseje centralizar também verticalmente */
-        height: 100%;
-        width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 90%;
     }
   
     .floating-benefits {
-      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+      height: 100%;
       width: 100%;
-      margin: 40px auto;
     }
   
     .explanation_container,
     .benefit_container {
-      padding: 0;
+      padding: 0 auto;
       border-radius: 20px;
       background: transparent;
       overflow: visible;
       z-index: 2;
       width: 100%;
     }
-  
-    .benefit_viewport {
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
-  
+
+    .explanation_box,
     .benefit_box {
       display: flex;
       flex-wrap: nowrap;
-      align-items: center; /* isso alinha verticalmente */
+      align-items: center;
       justify-content: center;
       width: max-content;
       gap: 20px;
     }
-  
-    .benefit_item {
-      min-width: 80vw;
-      max-width: 80vw;
-      flex: 0 0 auto;
-      scroll-snap-align: center;
-      background-color: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(1px);
-      border-radius: 20px;
-      padding: 24px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-      margin: 20px 10px;
-      box-sizing: border-box;
-    }
 
+     .benefit_item,
     .explanation_item {
+      min-height: 40vw;
       min-width: 80vw;
       max-width: 80vw;
-      flex: 0 0 auto;
       scroll-snap-align: center;
       background-color: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(1px);
@@ -165,9 +146,11 @@ header video {
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
       margin: 10% 100%;
       box-sizing: border-box;
+      padding: 36px 64px;
 }
-
     /* VIEWPORT centralizada */
+
+    .benefit_viewport,
   .explanation_viewport {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -176,16 +159,6 @@ header video {
     width: 100%;
     display: flex;
     justify-content: center;
-  }
-
-  /* BOX com scroll horizontal */
-  .explanation_box {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center; /* isso alinha verticalmente */
-    justify-content: center;
-    width: max-content;
-    gap: 20px;
   }
   
     .explanation_item h3,
@@ -213,9 +186,34 @@ header video {
     .benefit_viewport::-webkit-scrollbar {
       display: none;
     }
+
+    /* PONTOS DE SCROLL */
+
+    .benefit-dots,
+    .explanation-dots {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+      z-index: 10;
+      position: relative;
+    }
   
-    .benefit_viewport {
-      scrollbar-width: none;
+    .benefit-dots span,
+    .explanation-dots span {
+      width: 10px;
+      height: 10px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      opacity: 0.6;
+      transition: all 0.3s ease;
+    }
+  
+    .benefit-dots span.active,
+    .explanation-dots span.active {
+      background-color: #F4B500;
+      opacity: 1;
     }
 
 
@@ -381,9 +379,6 @@ header video {
 @media (min-width: 769px) {
 
 /* ALTERA A CAIXA DE BENEFICIOS */
-  #benefits_container {
-    display: block;
-  }
 
   .benefits {
     display: grid !important;
@@ -440,6 +435,6 @@ header video {
   .wind_turbine {
     min-width: 300px;
   }
+
+
 }
-
-
