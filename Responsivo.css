@@ -136,7 +136,7 @@ header video {
 
      .benefit_item,
     .explanation_item {
-      min-height: 40vw;
+      min-height: 70vw;
       min-width: 80vw;
       max-width: 80vw;
       scroll-snap-align: center;
