@@ -1,0 +1,34 @@
+@media (max-width: 768px) {
+  .benefit_viewport,
+  .explanation_viewport {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .benefit_item,
+  .explanation_item {
+    scroll-snap-align: center;
+    min-height: 70vw;
+    min-width: 80vw;
+    max-width: 80vw;
+}
+
+.benefit-dots,
+.explanation-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.benefit-dots span.active,
+.explanation-dots span.active {
+  background-color: #F4B500;
+  opacity: 1;
+}
+
+}
