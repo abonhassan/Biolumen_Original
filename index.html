@@ -11,11 +11,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
 <link href="./CSS ORGANIZADO/style.css" rel="stylesheet"/>
-<link href="./ScrollableSlide.css" rel="stylesheet">
-<link href="Responsivo_03_FINAL.css" rel="stylesheet"/>
+<link href="./CSS ORGANIZADO/Responsivo.css" rel="stylesheet"/>
 
 </head>
 
@@ -181,6 +181,7 @@
   <!--BENEFICIOS BIOLUMEN-->
 
   <section class="dynamic-benefits-wrapper">
+    
     <!-- Left side: 3 stacked impactful images -->
     <div class="benefits-images">
       <img src="./Images/photo_03.jpg" alt="Imagem 1" class="benefit-img img1" />
@@ -189,28 +190,44 @@
     </div>
   
     <div class="floating-benefits" id="floating_benefits_id">
+      
       <button class="slide-btn prev-benefit">&#10094;</button>
     
+      
       <div class="benefit_container">
+        
         <div class="benefit_viewport">
+          
           <div class="benefit_box">
+            
             <div class="benefit_item">
+              
               <h3>Economia Imediata</h3>
+              
               <p>Reduza sua conta de luz desde o primeiro mês com nossa solução inteligente.</p>
+            
             </div>
+            
             <div class="benefit_item">
+              
               <h3>Sustentabilidade</h3>
+              
               <p>Contribua para o meio ambiente com energia limpa e renovável.</p>
+            
             </div>
             <!-- ... -->
+          
           </div>
+
         </div>
     
-        <!-- ✅ Keep this! It will be filled dynamically -->
+    
         <div class="benefit-dots"></div>
+      
       </div>
     
       <button class="slide-btn next-benefit">&#10095;</button>
+
     </div>
     
   </section>
@@ -321,7 +338,7 @@
 
     <h2>Fale com a BioLumen</h2>
 
-    <form>
+    <form action="send-email.php" method="POST">
 
       <input name="nome" placeholder="Seu nome" required="" type="text"/>
 
@@ -356,5 +373,6 @@
 
 
 
-<script src="script.js"></script></body>
+</body>
+
 </html>
