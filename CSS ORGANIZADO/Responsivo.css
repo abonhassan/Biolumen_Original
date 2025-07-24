@@ -1,0 +1,584 @@
+
+@media (max-width: 767px) {
+
+  .brand-icon-container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100%;
+    margin: 0 auto !important;
+    text-align: center;
+  }
+
+  .brand-icon {
+    max-width: 80% !important;
+    height: auto !important;
+  }
+
+
+  .benefit_viewport,
+  .explanation_viewport {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    height: 100%;
+    width: 100%;
+    scroll-padding-left: 16px; /* aligns first item properly */
+    padding-right: 0; /* avoid extra offset */
+  }
+
+
+  /* Modern scrollbar for slider viewports */
+.benefit_viewport,
+.explanation_viewport {
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(57,92,170,0.6) transparent;
+}
+
+/* WebKit browsers */
+.benefit_viewport::-webkit-scrollbar,
+.explanation_viewport::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.benefit_viewport::-webkit-scrollbar-track,
+.explanation_viewport::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.benefit_viewport::-webkit-scrollbar-thumb,
+.explanation_viewport::-webkit-scrollbar-thumb {
+  background-color: rgba(57,92,170,0.6);
+  border-radius: 3px;
+  /* leave a little transparent border for breathing room */
+  border: 2px solid transparent;
+  background-clip: content-box;
+  transition: background-color 0.3s;
+}
+
+.benefit_viewport::-webkit-scrollbar-thumb:hover,
+.explanation_viewport::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(57,92,170,0.8);
+}
+
+  .floating-benefits .slide-btn,
+  .floating-explanation .slide-btn {
+    display: none;
+  }
+  
+  .benefit_box,
+  .explanation_box {
+    display: flex;
+    gap: 16px;
+    width: max-content; /* ✅ This is key */
+  }
+  
+  .benefit_item,
+  .explanation_item {
+    scroll-snap-align: start;
+    min-width: 100vw;
+    max-width: 100vw;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(1px);
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    box-sizing: border-box;
+    padding: 48px 24px;
+  }
+
+  .benefit_item h3,
+  .explanation_item h3 {
+    padding: 0 auto; 
+    font-size: 1.4rem;
+    color: #395CAA;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  .benefit_item p,
+  .explanation_item p {
+    text-align: left;
+    padding: 0 24px; 
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  /* Dots for mobile */
+  .benefit-dots,
+  .explanation-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 16px;
+  }
+
+  .benefit-dots span,
+  .explanation-dots span {
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .benefit-dots span.active,
+  .explanation-dots span.active {
+    background-color: #F4B500;
+    opacity: 1;
+  }
+
+
+  /* FOOTER */
+
+  footer p strong {
+    display: block;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 6px;
+    color: #222;
+  }
+  
+  footer p {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 0.9rem;
+    color: #333;
+    gap: 6px;
+    line-height: 1.4;
+    margin: 0;
+  }
+  
+  footer p i {
+    margin-right: 8px;
+  }
+  
+  footer p span,
+  footer p a {
+    word-break: break-word;
+    max-width: 90%;
+  }
+
+  footer p:last-of-type {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+
+
+@media (max-width: 767px) {
+
+  #introduction {
+        min-width: 80%;
+      }
+
+  .calculator {
+    height: auto;
+    padding: 20px;
+    margin-bottom: 0 !important;
+  }
+
+  #inputMeses {
+    display: none;
+  }
+
+  #graficoEconomia {
+    display: none;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+/* MUDA OS TITULOS PRINCIPAIS */
+
+ /* ==== HEADER FIX: h1 entre logo e vídeo ==== */
+
+ .header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 20px 20px 40px;
+  z-index: 3;
+}
+
+.brand-icon-container {
+  margin-bottom: 0 !important;
+}
+
+#title, .header-content h1 {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+  font-size: 2rem !important;
+  line-height: 1.2;
+  z-index: 3;
+  position: relative;
+}
+
+br {
+  display: none;
+}
+
+header video {
+  z-index: 1;
+}
+
+/* ==== Melhor legibilidade para h2 e parágrafo ==== */
+#header_benefit,
+#header_quote {
+  text-align: left !important;
+  margin: 10px auto;
+  max-width: 90%;
+  color: #222;
+  font-weight: 500;
+  text-shadow: none !important;
+}
+
+#header_benefit {
+  font-size: 1.5rem;
+  margin-top: 16px;
+}
+
+#header_quote {
+  font-size: 1.4rem;
+  font-style: italic;
+  color: #444;
+}
+
+/* ALTERA MARGEM NA INTRODUCAO */
+
+#introduction {
+  margin-top: 10%;
+}
+
+/* ALTERA A EXIBICAO DAS EXPLICACOES EM MOBILE */
+
+.dynamic-explanation-wrapper,
+  .dynamic-benefits-wrapper,
+  .faq-container {
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+    /* ESTRUTURA GERAL IGUALADA */
+    .floating-explanation {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 90%;
+    }
+  
+    .floating-benefits {
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+      height: 100%;
+      width: 100%;
+    }
+    
+    .benefit_item,
+    .explanation_item {
+      scroll-snap-align: start;
+      min-height: 70vw;
+      min-width: 80vw;
+      max-width: 80vw;
+  }
+
+.benefit-dots,
+.explanation-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.benefit-dots span.active,
+.explanation-dots span.active {
+  background-color: #F4B500;
+  opacity: 1;
+}
+  
+    .explanation_item h3,
+    .benefit_item h3 {
+      padding: 0 auto;
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      color: #395CAA;
+    }
+  
+    .explanation_item p,
+    .benefit_item p {
+      padding: 0 auto;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #333;
+    
+    }
+
+
+  /* ===== BACKGROUND IMAGES RESTORED AND VISIBLE ===== */
+  .layered-images,
+  .benefits-images {
+    display: block !important;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    width: 100vw;
+    height: 300px;
+    transform: translateX(-50%);
+    opacity: 1;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .layered-images img,
+  .benefits-images img {
+    position: absolute;
+    width: 45%;
+    max-width: 240px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+    transform: scale(1);
+    opacity: 0.9;
+    filter: brightness(1) saturate(1.2);
+  }
+
+  .layered-images .img1,
+  .benefits-images .img1 {
+    top: -20px;
+    left: 10%;
+    z-index: 1;
+  }
+
+  .layered-images .img2,
+  .benefits-images .img2 {
+    top: 20px;
+    left: 30%;
+    z-index: 2;
+  }
+
+  .layered-images .img3,
+  .benefits-images .img3 {
+    top: 40px;
+    left: 50%;
+    z-index: 3;
+  }
+
+  /* ===== SMALLER FAN IMAGE VISIBLE ===== */
+  .wind_turbine,
+  .wind_turbine_02 {
+    width: 70px !important;
+    min-width: 60px !important;
+    max-width: 90px !important;
+    top: auto;
+    right: 10px;
+    z-index: 1;
+    opacity: 1 !important;
+    display: block;
+  }
+
+  /* FAQ - PERGUNTAS E RESPOSTAS */
+
+  .faq-right img {
+    width: 60vw;
+    max-width: 280px;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;
+    border-radius: 16px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+    padding: 6px;
+    background-color: #fff;
+    transform: rotate(-2deg);
+    box-sizing: content-box;
+  }
+
+  .faq-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 16px;
+    gap: 20px;
+  }
+
+  .faq-left {
+    width: 100%;
+  }
+
+  .faq-right {
+    width: 100%;
+  }
+
+  /* FOOTER CONTAINER */
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    padding: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  footer .footer-content,  /* If you have a wrapper */
+  footer .contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+    flex-wrap: wrap;
+  }
+
+  /* EACH CONTACT BLOCK */
+  footer p strong {
+    display: block;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 6px;
+    color: #222;
+  }
+
+  footer p {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #333;
+    gap: 10px;
+    flex-wrap: wrap;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  footer p i {
+    font-size: 1.2rem;
+    min-width: 18px;
+    text-align: center;
+  }
+
+  /* Spacing control */
+  footer p + p {
+    margin-top: 4px;
+  }
+
+  /* Avoid layout breaking on long emails */
+  footer p span,
+  footer p a {
+    word-break: break-word;
+    max-width: 90%;
+  }
+
+}
+
+@media (prefers-color-scheme: dark) and (max-width: 768px) {
+  /* Force original button styles */
+  button,
+  .calculator button,
+  #inputMeses button,
+  #CTA,
+  .contact-form button {
+    background: linear-gradient(135deg, #f7971e, #ffd200) !important;
+    color: #222 !important;
+    box-shadow: 0 6px 16px rgba(255, 166, 0, 0.3) !important;
+    border: none !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+  }
+
+  button:hover,
+  .calculator button:hover,
+  #inputMeses button:hover,
+  #CTA:hover,
+  .contact-form button:hover {
+    background: linear-gradient(135deg, #ffae00, #ffe044) !important;
+    box-shadow: 0 10px 20px rgba(255, 140, 0, 0.4) !important;
+  }
+
+  /* Footer preserved */
+  footer {
+    background-color: #F4B500 !important;
+  }
+}
+
+
+@media (min-width: 769px) {
+
+/* ALTERA A CAIXA DE BENEFICIOS */
+
+  .benefits {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 40px;
+  }
+
+  /* ALTERA O TAMANHO MINIMO DA TURBINA */
+
+   .wind_turbine {
+    min-width: 200px;
+  }
+
+  .wind_turbine_02 {
+    min-width: 400px;
+  }
+
+  /* ALTERA O POSICIONAMENTO E A MARGEM DA INTRODUCAO */
+
+  .introduction_container {
+    justify-content: flex-start;
+    margin-left: 200px;
+  }
+}
+
+
+@media (min-width: 1024px) {
+
+  /*  COLOCA VIDEO-HEADER E TURBINA EM COLUNAS */ 
+  .desktop-row {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: flex-start;
+    margin: 40px auto;
+    max-width: 1100px;
+  }
+
+  .desktop-row h2 {
+    flex: 1;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .desktop-row video {
+    flex: 1;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  /* TURBINA */
+
+  .wind_turbine {
+    min-width: 300px;
+  }
+
+
+}
+
